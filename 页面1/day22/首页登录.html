@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .c1{
+            height: 750px;
+            background-image: url(1.png);
+            background-size: contain;
+            position: relative;
+        }
+        .c2{
+            background-color: #212B39;
+            height: 1900px;
+        }
+        .a{
+            width: 1190px;
+            height: 691px;
+            background-image: url(图层16.png);
+        }
+        .c1 .c2{
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            top:12px;
+            left:150px;
+
+        }
+        .c1 .c3{
+            position: absolute;
+            top: 15px;
+            left: 400px;
+        }
+        .c1 .c4{
+            position: absolute;
+            top:15px;
+            left: 470px;
+        }
+        .c1 .c5{
+            position: absolute;
+            top:15px;
+            left: 540px;
+        }
+        .c1 .c6{
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        .c6:hover{
+            background-color: slategray;
+
+        }
+        .c7{
+            position: absolute;
+            top:15px;
+            left: 1000px;
+        }
+        .c8{
+            position: absolute;
+            top:15px;
+            left: 1090px;
+            width: 60px;
+            height: 25px;
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+        .c9{
+            width: 60px;
+            height: 25px;
+            position:absolute;
+            top: 15px;
+            left: 1200px;
+        }
+        .hide{
+            display: none;
+        }
+        .modal{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 400px;
+            margin-left: -250px;
+            margin-top: -250px;
+            background-color: #eeeeee;
+            z-index: 10;
+        }
+        .shadow{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.6;
+            background-color: black;
+            z-index: 9;
+        }
+        .modal01{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 450px;
+            height: 500px;
+            margin-left: -250px;
+            margin-top: -250px;
+            background-color: #eeeeee;
+            z-index: 10;
+        }
+        .shadow01{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.6;
+            background-color: black;
+            z-index: 9;
+        }
+        .hide1{
+            display: none;
+        }
+        
+        .body .c1{
+            position: absolute;
+            top:1750px;
+            left:150px;
+            width: 373px;
+            height: 650px;
+        }
+        .body .c2{
+            position: absolute;
+            top:1700px;
+            left:550px;
+            width: 373px;
+            height: 425px;
+            
+        }
+        .body .c3{
+            position: absolute;
+            top:2000px;
+            left:550px;
+            width: 373px;
+            height: 435px;
+        }
+        .body .c4{
+            position: absolute;
+            top:2000px;
+            right: 100px;
+            color: #FFFFFF;
+            font-size: 40px;
+
+        }
+        .body .c5{
+            position: absolute;
+            top:2100px;
+            right: 150px;
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+        .foot{
+            background-color:  #212B39;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <div class="c2">
+            <img src="图层 7.png" style="width: 100px; height: 25px;"/>
+        </div>
+        <div class="c3" style="width: 32px;height: 15px;color:#FFFFFF;font-size: 15px;">
+            <a  href="10.html" class="c6">首页</a>
+        </div>
+        <div class="c4" style="width: 30px;height: 15px;color:#FFFFFF;font-size: 15px;">
+            <a href="订单.html" class="c6">订单</a>
+        </div>
+        <div class="c5" style="width: 63px;height: 15px;color:#FFFFFF;font-size: 15px;">
+            <a href="新闻.html" class="c6">新闻展示</a>
+        </div>
+        
+        <div class="c7">
+            <input type="button" value="登录" onclick="denglu();"/>
+            <div class="modal01 hide1">
+                <div style="width: 70px;height: 35px;font-size: 35px;color: black;
+                position: absolute;
+                top:40px;
+                left:40px;">登录</div>
+                <div style="position: absolute;top:160px;left: 40px;">
+                    <span style="font-size: 26px;color: black;">账号:</span>
+                    <input type="text" style="width: 230px;height: 26px;margin-top: 4px;"/>
+                </div>
+                <div style="position: absolute;top:250px;left: 40px;">
+                    <span style="font-size: 26px;color: black;">密码:</span>
+                    <input type="text" style="width: 230px;height: 26px;margin-top: 4px;"/>
+                </div>
+                <div style="width: 100px;height: 35px; position: absolute;left: 40px;bottom: 50px;">
+                    <img src="登录.png" style="width: 100px;height: 35px;"/>
+                </div>
+                <a style="position: absolute; right: 40px;top:325px; font-size: 15px;">忘记密码</a>
+                <div style="position: absolute;bottom: 0px;right: 0px;">
+                    <input type="button" value="取消" onclick="cancel();" />
+                </div>
+            </div>
+            <div class="shadow01 hide1"></div>
+
+        </div>
+            
+        </div>
+        <div class="c8">
+            <a onclick="zhuce();"><img src="矩形 2 拷贝 2.png"/></a>
+            <div class="modal hide">
+                <div style="width: 800px; 
+                height: 60px; 
+                font-size: 30px;
+                text-align: center;
+                line-height: 60px; 
+                color: black;
+                font-weight: bold;">注册</div>
+                <div style="position: relative;">
+                    <div style="position: absolute;top:10px;">
+                        <apan style="color: black; font-size: 25px;">邮箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</apan>
+                        <input style="width: 250px; height: 25px;"type="text" />
+                    </div>
+                    <div style="position: absolute; left:400px;top:10px;">
+                        <span style="color: black; font-size: 25px;">邮箱码验证:</span>
+                        <input style="width: 250px; height: 25px;"type="text" />
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <div style="position: absolute;top:70px;">
+                        <apan style="color: black; font-size: 25px;">登录密码:</apan>
+                        <input style="width: 250px; height: 25px;"type="text" />
+                    </div>
+                    <div style="position: absolute; left:400px;top:70px;">
+                        <span style="color: black; font-size: 25px;">确认密码&nbsp;&nbsp;&nbsp;:</span>
+                        <input style="width: 250px; height: 25px;"type="text" />
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <div style="position: absolute;top:130px;">
+                        <apan style="color: black; font-size: 25px;">邀请码&nbsp;&nbsp;&nbsp;&nbsp;:</apan>
+                        <input style="width: 250px; height: 25px;"type="text" />
+                    </div>
+                    <div style="position: absolute; left:400px;top:140px;">
+                        <img src="矩形 7.png"/>
+                    </div>
+                </div>
+                <div style="color: black;height: 48px;width: 800px;font-size: 18px;text-align: center;
+                position: absolute;bottom:30px; 
+                ">注册后无法更改国籍信息，请务必根据实际情况进行选择。验证电子邮件可能被误认为是垃圾邮件，请注意检查。请保留您的Fbex
+                    帐户登录名和密码。请不要和其他站点使用相同的密码。
+                </div>
+                <div style="width:300px;height:100px;position: absolute;bottom:40px;left: 250px;">
+                    <img src="注册.png" style="width: 300px;height: 100px;">
+                </div>
+                <div style="position: absolute;bottom: 0px;right: 0px;">
+                    <input type="button" value="取消" onclick="cancelModal();" />
+                    <input type="button" value="注册" onclick="confirmModal();" />
+                </div>
+            </div>
+        
+            <div class="shadow hide"></div>
+        </div>
+        <div class="c9">
+            <img src="中 简.png">
+    
+        </div>
+        
+    </div>
+    <div class="c2">
+        <div class="a" style="position: relative;">
+            <span style="position: absolute; left:150px;font-size: 45px;color: #FFFFFF;">一站式数字资产服务平台</span>
+            <span style="position: absolute; left:150px;top:55px;font-size: 25px;
+            color: #FFFFFF;">One-stop digital asset services platform</span>
+            <div style="position: absolute;left:200px;top:300px;">
+                <img src="火箭.png"/>
+                <div style="position: absolute;top:150px; color: #FFFFFF;">快速方便</div>
+                <div style="position: absolute;top:200px;left:-70px; 
+                color: #FFFFFF; font-size: 10px;">实施存取基金 随时随地交易</div>
+            </div>
+            <div style="position: absolute;left:400px;top:300px;"> 
+                <img src="全球.png"/>
+                <div style="position: absolute;top:150px; color: #FFFFFF;">全球化平台</div>
+                <div style="position: absolute;top:200px; color: #FFFFFF; font-size: 10px;">提供全球交易服务</div>
+            </div>
+            <div style="position: absolute;left:600px;top:300px;">
+                <img src="智能.png"/>
+                <div style="position: absolute;top:150px; color: #FFFFFF;">安全智能</div>
+                <div style="position: absolute;top:200px; left:-40px;right:-30px;color: #FFFFFF; 
+                font-size: 10px;">精确智能操作，值得信赖</div>
+            </div>
+            <div style="position: absolute;left:800px;top:300px;">
+                <img src="24小时服务.png">
+                <div style="position: absolute;top:150px; color: #FFFFFF;">优质服务</div>
+                <div style="position: absolute;top:200px; color: #FFFFFF; font-size: 10px;">24小时在线支持</div>
+            </div>
+        </div>
+        <div class="body">
+            <img class="c1"src="图层 12.png"/>
+            <img class="c2" src="图层 11.png"/>
+            <img class="c3" src="图层 13.png"/>
+            <div class="c4">全平台终端访问</div>
+            <div class="c5">os和Android扫描二维码下</div>
+        </div>
+    </div>
+    <div class="foot">
+        <div style="position: absolute;top:2800px; left:170px;">
+            <img src="图层 15.png">
+        </div>
+        <div style="position: absolute;top:2800px; left:450px;color: #FFFFFF;">
+            <p style="margin-bottom: 10px;">全球化平台</p>
+            <p style="margin-bottom: 10px;">介绍</p>
+            <p style="margin-bottom: 10px;">联系我们</p>
+            <p style="margin-bottom: 10px;">公告</p>
+            <p>新闻</p>
+        </div>
+        <div style="position: absolute;top:2800px; left:625px;color: #FFFFFF;">
+            <p style="margin-bottom: 10px;">支持</p>
+            <p style="margin-bottom: 10px;">数字资产介绍</p>
+            <p style="margin-bottom: 10px;">法律声明</p>
+            <p style="margin-bottom: 10px;">隐私声明</p>
+            <p style="margin-bottom: 10px;">协议下载</p>
+            <p style="margin-bottom: 10px;">声明下载</p>
+            <p>救命</p>
+        </div>
+        <div style="position: absolute;top:2800px; left:800px;color: #FFFFFF;">
+            <p style="margin-bottom: 10px;">博客卷</p>
+            <p style="margin-bottom: 10px;">硬币卓</p>
+            <p style="margin-bottom: 10px;">投币电报</p>
+            <p style="margin-bottom: 10px;">CCNA</p>
+            <p style="margin-bottom: 10px;">隐岩</p>
+            <p>币主义者</p>
+        </div>
+        <div style="position: absolute;top:2800px; left:975px;color: #FFFFFF;">
+            <p style="margin-bottom: 10px;">联系我们</p>
+            <p style="margin-bottom: 10px;">官网: www.fbexbit.com</p>
+            <p style="margin-bottom: 10px;">电子邮件：Fbexbitserver@gmail.com</p>
+            <p>地址：菲律宾马卡蒂市马卡蒂街金融广场</p>
+        </div>
+        <div style="position: absolute;bottom: 50px; top:3200px;left:200px;width: 1000px;height: 17px;
+        border: 1px dashed #FFFFFF;margin: 0 auto;"></div>
+               
+
+    </div>
+    
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        
+        function  zhuce() {
+            $(".modal,.shadow").removeClass('hide');
+        }
+        function  cancelModal() {
+            $(".modal,.shadow").addClass('hide');
+        }
+        function  denglu() {
+            $(".modal01,.shadow01").removeClass('hide1');
+        }
+        function  cancel() {
+            $(".modal01,.shadow01").addClass('hide1');
+        }
+    </script>
+</body>
+</html>
